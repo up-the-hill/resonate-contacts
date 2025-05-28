@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import ContactCard from "./components/ContactCard";
+import Header from "./components/Header";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -41,7 +42,7 @@ function App() {
 
   return (
     <>
-      Hello world
+      <Header></Header>
       {contacts.map((contact) => ContactCard(contact))}
     </>
   );
