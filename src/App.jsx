@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import ContactCard from "./components/ContactCard";
 import Header from "./components/Header";
 
@@ -42,8 +41,10 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      {contacts.map((contact) => ContactCard(contact))}
+      <Header />
+      <div className="contacts-container">
+        {contacts.map((contact) => ContactCard(contact))}
+      </div>
     </>
   );
 }
