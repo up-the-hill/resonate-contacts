@@ -42,8 +42,13 @@ function App() {
   return (
     <>
       <Header />
-      <div className="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4" id="contacts-container">
-        {contacts.map((contact) => ContactCard(contact))}
+      <div
+        className="container mx-auto p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        id="contacts-container"
+      >
+        {contacts.map((contact) => (
+          <ContactCard key={contact.id} contact={contact} />
+        ))}
       </div>
     </>
   );
