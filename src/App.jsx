@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ContactCard from "./components/ContactCard";
 import Header from "./components/Header";
+import { IconLoader2 } from "@tabler/icons-react";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -30,8 +31,11 @@ function App() {
   }, []);
 
   if (loading) {
-    // TODO
-    return "Loading";
+    return (
+      <div className="h-screen w-screen flex justify-center items-center">
+        <IconLoader2 className="animate-spin h-8 w-8" />
+      </div>
+    );
   }
 
   if (error) {
